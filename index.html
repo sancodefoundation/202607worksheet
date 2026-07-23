@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>我的網頁分享主頁</title>
+   <meta charset="UTF-8">
+    <!-- 💡 關鍵 1：這行 meta 標籤確保手機上能正常縮放與排版 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作單選單</title>
+    
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f9f9f9; }
-        .grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .icon-link { text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; }
-        .icon { width: 80px; height: 80px; background-color: #e0e0e0; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin-bottom: 10px; transition: transform 0.2s; }
-        .icon:hover { transform: scale(1.1); background-color: #d0d0d0; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* 💡 關鍵 2：控制圖示每行 4 個的網格樣式 */
+        .grid {
+            display: grid;
+            /* 強制設定為 4 欄 (欄位平分寬度) */
+            grid-template-columns: repeat(4, 1fr); 
+            /* 圖示之間的間距 (可依喜好調整，如 10px 或 20px) */
+            gap: 15px; 
+            max-width: 800px;
+            margin: 0 auto; /* 置中呈現 */
+        }
+
+        /* 每個圖示按鈕的樣子 */
+        .icon-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 5px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* 滑鼠懸停或按壓效果 */
+        .icon-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        span {
+            font-size: 14px;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        /* 💡 選擇性加強：如果手機螢幕非常窄（如 iPhone 小螢幕），4 個字體可能會太擠，
+           下方設定能在手機超窄時自動變成每行 2 個，閱讀體驗更佳！ */
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr); /* 若堅持手機也要強制 4 個，可維持 4 */
+                gap: 8px; /* 縮小間距避免擠壓 */
+            }
+            .icon {
+                font-size: 22px; /* 稍微縮小圖示 */
+            }
+            span {
+                font-size: 12px; /* 稍微縮小文字 */
+            }
+        }
     </style>
 </head>
 <body>
