@@ -1,0 +1,799 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>洪承鋒</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a764f07-2ce2-81bd-9b61-d604931b4e60" class="page sans"><header><h1 class="page-title" dir="auto">洪承鋒</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-created_by"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/user-circle_gray.svg" style="width:14px;height:14px;display:block"/></span>回覆者</th><td><span class="user"><img src="https://s3.us-west-2.amazonaws.com/public.notion-static.com/5478707d-f8ea-46d8-902a-d6d932ac20da.png" class="icon user-icon"/>Anonymous</span></td></tr><tr class="property-row property-row-phone_number"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/phone-call_gray.svg" style="width:14px;height:14px;display:block"/></span>你的手機號碼</th><td><a href="0916197307" class="url-value">0916197307</a></td></tr><tr class="property-row property-row-email"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/username_gray.svg" style="width:14px;height:14px;display:block"/></span>你的 email</th><td><a href="jacky0321@apps.ntpc.edu.tw" class="url-value">jacky0321@apps.ntpc.edu.tw</a></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 1-1、【本次參訪學習心得】這趟旅程中去了好幾個景點，你對哪一個景點印象最深刻呢？（擇一）</th><td><span class="selected-value select-value-color-yellow">屏東｜海生館後場導覽</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 1-2、上方選擇的景點裡，你覺得與哪些 SDGs 有關？（多選）</th><td><span class="selected-value select-value-color-green">SDG 13：氣候行動</span><span class="selected-value select-value-color-green">SDG 14：海洋生態</span><span class="selected-value select-value-color-green">SDG 4：優質教育</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 1-3、在參訪上方你所選的這個景點時，有什麼收穫與心得？</th><td>這是我第一次到海生館，我學到了原來珊瑚種類有好幾百種以上甚至還有我們未發現的品種，牠們都有獨特的風格和形狀，每一個被培育的種類都有些許的熱帶魚陪著牠們，彷彿蓋了一座小小的海洋，不用到浮潛就可以看過癮學過癮。沒想到還有還有海龜的救傷也會在這裡救治，不僅看到受傷的海龜在恢復池裡養傷，還學到一系列的救傷步驟。最後在標本館還看到各種不同大小的標本，製作標本的過程，瞭解到標本背後的故事。這次的導覽海生館學習，讓我見到許多生龍活虎的海洋動物們有精神的出現在我眼前。</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 2-1、【本次參訪學習心得】這趟旅程中去了好幾個景點，除題組一的景點外，你覺得印象次佳的景點是？（擇一）</th><td><span class="selected-value select-value-color-brown">高雄｜智崴科技企業參訪</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 2-2、上方選擇的景點裡，你覺得與哪些 SDGs 有關？（多選）</th><td><span class="selected-value select-value-color-green">SDG 17：全球夥伴</span><span class="selected-value select-value-color-green">SDG 4：優質教育</span><span class="selected-value select-value-color-green">SDG 9：產業創新與基礎設施</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 2-3、在參訪上方你所選的這個景點時，有什麼收穫與心得？</th><td>我在智崴科技參訪第一眼看到許多的遊戲設施非常驚訝。沒想到我也有一天可以以參訪身份體驗這些設施，我覺得每一個都做的很逼真很用心的設計，不僅會有暈眩感還會覺得自己身歷奇境。再來是體驗大型的飛越設施，看見臺灣的美。這個設施讓我想起好幾年前在高雄義大搭過的設施是同樣的感覺，也經由休息空檔詢問建樂經理，才知道原來是他們所研發的設施，讓我再次的驚訝。但歷經多年再搭一次，感受到創新科技的進步，畫面的真實感提升，逼真效果加倍。<br/>經由短短的時間體驗及聽完經理的講座，我更瞭解到sdgs的重要發展性。</td></tr><tr class="property-row property-row-file"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/attachment_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 3-1、在這次三天二夜的參訪過程中，除了有趣的景點與生動的導覽之外，想必也有一些讓你感動的瞬間，請你跟我們分享你拍下的一張，你最有感覺的照片，並跟我們分享你拍攝的時候，是對當下的美景或氛圍／當地生態環境／所見的新奇科技／趣味的同濟互動留下深刻的印象，還是有什麼其他原因讓你覺得十分難忘？</th><td><span style="margin-inline-end:6px"><a href="%E6%B4%AA%E6%89%BF%E9%8B%92/IMG20260707144818.jpg"><img style="width:20px;max-height:24px" src="%E6%B4%AA%E6%89%BF%E9%8B%92/IMG20260707144818.jpg" alt="IMG20260707144818.jpg"/></a></span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 3-2、承上題，這張照片的拍攝地點是？</th><td>海生館的水族實驗中心</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 3-3、你的感想或這張照片的特色說明：</th><td>看見海龜就會想到經常在網路上看到許多牠的同伴也有受傷過可是卻沒有被即時的發現或是受傷的海龜太緊張，直到用完力氣都來不及游到岸上，就這樣上天堂了。我覺得牠們都很辛苦每次只要一不小心就會被魚線漁網纏到，嚴重的話可能截肢，輕微的皮肉傷，無法想像牠們被海洋垃圾絆住時的痛苦不安感。真的很謝謝持續在緊急救助海洋動物的志工和研究員的辛苦付出，隨時待命。</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【題組 4 說明｜永續培力題】在這趟「南國散策」旅程之中，我們親自走訪了恆春半島，上山下海，體驗當地的生態環境，同時也參訪了科技公司，了解一家企業如何實現 ESG，並且學習到怎麼應用科技方法實現環境永續。
+
+題組 4-1、這趟旅程中，你親眼看到了哪些環境問題，又或者，你在這三天二夜的行程中，領悟、發覺到了哪些台灣潛在的環境危機？</th><td>夜間朝間帶的海洋垃圾什麼種類都出現在海岸，有些或許可以很好的溶解在海洋裡，可是這樣子依舊會循環到人類的肚子裡，我覺得垃圾分類隨手撿走在海邊製造的垃圾是大家不可或缺的好習慣，這樣才能永續經營海灘，給下一位觀光客可以繼續的欣賞海洋的美。</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 4-2、以你的了解，什麼是「ESG」呢？</th><td>我瞭解到是基於永續發展理念所產生的企業營運策略包含環境保護、社會責任、與公司治理。「環境保護」：指的是企業在生產過程是否減少碳足跡，並要求企業必須正視工廠排放廢氣、廢水等環境問題、改使用一定比例的綠色能源，否則影響企業營運表現。<br/>「社會責任」：常見的項目，包括企業是否杜絕強迫勞動、提供男女平等的工作環境等。<br/>「公司治理」：要求企業必須保障利害關係人利益、制定穩定的供應鏈，並維持資訊公開透明。</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 4-3、如果今天你是一位推動環境教育的專家，針對 4-1 題你所發現的問題，必須尋求一家希望能實現社會責任的企業贊助，你會怎麼說服這家企業呢？請列出可以放在募款 PPT 末尾，說服該家企業贊助的五大項重點摘要。</th><td>海洋生態,優質教育：設立海洋海岸教育營，給予青年學生及社會人士認識<br/>海洋海岸的重要性，以全額補助,DIY永續作品，實踐永續經營的原則，擴大感染力，站穩全世界。</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【題組 5 說明｜AI 協作題】這次的旅程中，不乏經過一些偏鄉地區，民風淳樸、環境單純，是科技進步的台灣島上，相較低度開發的地方。如果今天讓你針對「屏東偏鄉地區」，結合在地風俗、物產與特色，展開一套社區再造計畫，並結合科技方法，可以怎麼做呢？
+
+題組 5-1 、你與 AI 討論出的結果：</th><td>我覺得可以發展出AI 智慧農業與地方特色保存，導入物聯網（IoT）微型氣象站與 AI 疾病預測系統，轉型友善耕作及排灣、魯凱族傳統祭典與文化故事，打造數位沉浸式和互動遊戲導覽。實質運用為智慧綠色生態旅遊可開發低碳旅遊 App，整合電動共享載具、碳足跡計算與小農體驗預約，帶動在地青創與觀光發展。</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 5-2、以上方案符合哪幾項 SDGs？（多選）</th><td><span class="selected-value select-value-color-blue">SDG 11：永續城市與社區</span><span class="selected-value select-value-color-blue">SDG 12：負責任的消費與生產</span><span class="selected-value select-value-color-blue">SDG 4：優質教育</span><span class="selected-value select-value-color-blue">SDG 8：尊嚴就業與經濟發展</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/link_gray.svg" style="width:14px;height:14px;display:block"/></span>【題組 6 說明｜AI 協作題】本次營隊中，我們不僅探訪了海生館和潮間帶等海洋風光，以及雙流、旭海等林相之美，也透過智崴科技與沙崙綠能科技示範場域的參訪，看見了「科技」如何提升環境意識、解決環境問題。然而，要發展真正的「永續旅遊（Sustainable Tourism）」，則必須在環境保護、經濟發展與居民生活之間取得精妙平衡。
+現在，請你與 AI 協作，扮演一位想要推廣環境永續與生態保護的旅遊規劃師，就你本次營隊的經驗與觀察，為高中生規劃一趟三天二夜的台灣生態之旅，並寫下你規劃的理念與希望參加者得到哪些收穫。
+
+題組 6-1 、你與 AI 的對話視窗連結：</th><td><a href="https://www.google.com/maps/dir" class="url-value">https://www.google.com/maps/dir</a></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 6-2、條列出你推薦的 4～8 個景點＋該地看點＋適合遊程主題與參加者的原因？：</th><td>王功蚵藝文化館<br/>八卦山脈生態遊客中心（灰面鵟鷹主題館）<br/>奧萬大國家森林遊樂區<br/>阿里山林業村與車庫園區<br/>虎尾鐵橋與同心公園<br/>古坑草嶺石壁竹創森園區</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>題組 6-3、你的理念與希望參加者得到的收穫：</th><td>永續絕非遙遠的口號，而是人與土地共生的智慧。無論是廢棄蚵殼變身藝術創作（王功）、猛禽棲地保育（八卦山），還是高碳匯竹林的永續管理（石壁），都展現了自然生態與地方產業和諧共存的無限可能。我看見了台灣土地的強大韌性。奧萬大的山林復育與阿里山林業村、虎尾鐵橋的文化資產活化傳承，證明了透過循環經濟與歷史保存，都能賦予舊資源全新的綠色生命。這趟旅程重塑了我的視野，未來我將把「責任消費」與「低碳行動」落實於日常，為永續環境盡一份心力。</td></tr><tr class="property-row property-row-checkbox"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/checkmark-square_gray.svg" style="width:14px;height:14px;display:block"/></span>⭐️ 以下開始是加分題 ⭐️</th><td><input type="checkbox" class="checkbox checkbox-on" disabled="" checked=""/></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 1】
+在智崴科技體驗的「虛擬飛行」與在墾丁體驗的「真實潮間帶」，兩者對你產生的感覺有何不同？你認為「科技模擬」能取代「親身接觸自然」嗎？</th><td>親身接觸實際看見在眼前我覺得比較有感，會有深刻的印象，之後在腦海裡還是會有那個畫面出現。</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 2】
+2026 年起，台灣正式全面禁止違反動物天性的娛樂性海豚表演，然而，對於部分海豚展演場所而言，「如何轉型」及「動物的後續處理」，成為他們必須面對的問題。結合本次海生館後場的導覽經驗，以及 AI 的輔助，請告訴我們你覺得海豚展演場所可以怎麼妥適地度過這次的轉型危機，並實現動物福祉和教育推廣？</th><td>海豚的遊戲互動，周邊商品開發以及海豚的大型水族魚缸近距離欣賞不表演</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 3】
+今年 5 月一則新聞指出，夏威夷茂納羅亞觀測站監測到大氣中的二氧化碳濃度來到歷史新高，且恐怕與 AI 的高速發展下，背後伺服器運轉所消耗的能源（發電時產生的碳排）有關。請結合這次沙崙綠能科技示範場域的參訪經驗，你覺得 AI 發展與環境污染間的平衡可以怎麼達成？</th><td>二氧化碳的ai捕捉設備我覺得可以減少濃度升高維持平衡</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 4】
+目前，旭海草原遊樂區與雙流國家森林遊樂區在推動觀光上，若無導覽員的講解和引導，恐難以深入地認識當地林相、動物生態。如果你是這兩處某一個景點的最高管理者，你會用什麼方法，來讓民眾即使在無法預約到導覽員的情況下，也可以自行參觀、學習呢？能應用到科技手段為佳！</th><td>設立木板並寫下所有植物名稱應該注意的地方 並且實時監控園區狀態<br/>可以透過監控告訴大家知識及注意</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 5】
+雙流國家森林遊樂區中，最具代表性的地標植物？</th><td><span class="selected-value select-value-color-gray">台灣扁柏</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 6】
+旭海草原遊樂區無法看到以下哪種植物？</th><td><span class="selected-value select-value-color-pink">台灣萍蓬草</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 7】
+旭海漁港無法捕撈到哪種漁獲？</th><td><span class="selected-value select-value-color-gray">石斑</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 8】
+墾丁國家公園的潮間帶，基本上無法在夜間看到哪些物種？</th><td><span class="selected-value select-value-color-pink">五帶豆娘魚</span></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 9】
+墾丁潮間帶看到的海葵，沒有以下哪項特性？</th><td><span class="selected-value select-value-color-gray">口肛同孔</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 10】
+請依據以下短文中的內容，依序填入對應的代號：
+
+屏東的生態樣貌如同地圖上的顏色拼貼，每一塊棲地都有其獨特的「生存密碼」。當我們站在墾丁海岸，腳下的   ❶   是由無數微小生物耗費千年構築而成，這層屏障保護了後方的    ❷   ，使其免於強風直接侵襲。進入    ❸   ，你會發現這裡的生物必須具備極強的    ❹   ，例如陽燧足在受敵時能自斷觸手。</th><td>ABCD</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 11】
+請依據以下短文中的內容，依序填入對應的代號：
+
+旭海草原因受到   ❶   的長期物理壓力，原應參天的植物呈現    ❷    狀態。隨後抵達雙流森林核心，繁茂的    ❸    形成了巨大的保水庫，這具有    ❹    功能，能調節微氣候。</th><td>CBAD</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 12】
+請依據以下短文中的內容，依序填入對應的代號：
+
+來到沙崙綠能科技示範場域，映入眼簾的是   ❶   這座外型獨特的建築，利用自然對流與節能構造，成為淨零建築的示範原型；在電力穩定性方面，為應對再生能源的間歇性，場域內設置了    ❷    作為緩衝，其中又以    ❸    進行能源轉換的設備最受矚目；走入智慧家居，則能看見    ❹    扮演「大腦」的角色，自動化調控家庭能耗。</th><td>ADBC</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>【加分題 13】
+以下各參訪景點與觀察，分別對應哪些科學手段？請依序寫下代號：
+
+❶ 海生館｜確保人工環境下數萬種海洋生物的生存需求與水質穩定。
+❷ 旭海草原｜利用原生植被（如海岸林）作為屏障，應對強烈海風和氣候衝擊。
+❸ 雙流森林遊樂區｜追蹤森林演替過程，掌握動植物在環境開發後的棲地變化。
+❹ 智崴科技｜從研發階段即考量數位設備零件的回收與長效耐用性。
+❺ 沙崙綠能科技示範場域｜整合 E-Cube 與智慧家居，達成區域電力之最佳調度。</th><td>EADCB</td></tr><tr class="property-row property-row-checkbox"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/checkmark-square_gray.svg" style="width:14px;height:14px;display:block"/></span>💡 學習資源</th><td><input type="checkbox" class="checkbox checkbox-on" disabled="" checked=""/></td></tr><tr class="property-row property-row-checkbox"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/checkmark-square_gray.svg" style="width:14px;height:14px;display:block"/></span>💡 學習資源 (1)</th><td><input type="checkbox" class="checkbox checkbox-on" disabled="" checked=""/></td></tr><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><img src="https://app.notion.com/icons/clock_gray.svg" style="width:14px;height:14px;display:block"/></span>提交時間</th><td><time datetime="2026-07-24T12:05">July 24, 2026 12:05 PM</time></td></tr></tbody></table></header><div class="page-body"></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
